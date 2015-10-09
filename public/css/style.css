@@ -1,0 +1,109 @@
+/*** FOR TABLE **/
+
+.a-table-wrapper{
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 6px 6px 0 0;
+  border:1px solid #dbdbdb;
+}
+
+table.a-table{
+  width: 100%;
+  table-layout: fixed;
+  font-size: 13px;
+  cursor: default;
+}
+
+.a-table-wrapper table.a-table td,
+.a-table-wrapper table.a-table th {
+  line-height: 36px;
+  padding: 0 15px;
+  white-space: nowrap;
+  vertical-align: top;
+  border-bottom: 1px dotted #d0d0d0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  vertical-align: middle !important;
+  text-align: left;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fixed-column {
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  position: absolute;
+  left: 0;
+  border-top: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  min-width: 240px !important;
+  max-width: 240px !important;
+
+  background-color: #f2f2f2;
+  font-weight: 500;
+  color: #595959;
+}
+
+.glyphicon {
+  position:relative;
+  margin-top:10px;
+}
+
+:first-child{
+  border-top-width:0px;
+}
+
+.fixed-header{
+  border-bottom: 1px solid #dbdbdb;
+  z-index:2;
+}
+
+tbody tr:hover{
+  background:rgba(91, 192, 222, .5);
+}
+
+#configure-column-link{
+  position: relative;
+  margin-top: 23px;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px solid;
+  content: "";
+}
+
+.right-side-buttons{
+  position: relative;
+  margin-top: 20px;
+}
+
+.primary-color {
+  color: #f37726;
+}
+
+.report-title{
+  position: relative;
+  margin:0;
+  margin-top: 31px;
+}
+/*** END FOR TABLE **/
+
+form.transfer .amount {
+  width: 100px;
+}

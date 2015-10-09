@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="friendDebt">
+
+<head>
+  <title>Bank Online</title>
+  <link data-require="bootstrap-css@*" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.25/angular.js" data-semver="1.2.25"></script>
+  <script data-require="ui-bootstrap@*" data-semver="0.11.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+<div class="col-md-10 col-sm-9 small-padding">
+  <!-- start of center column -->
+  <div class="panel panel-default small-margin">
+    <div class="panel-heading">
+      <h2>Bank Online Transactions</h2>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <br/>
+          <div class="position-relative">
+            <div class="a-table-wrapper">
+              <table class="a-table">
+                <thead>
+                <tr>
+                  <th>id</th>
+                  <th>Name</th>
+                  <th>Balance</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="customer in friends">
+                  <td>{{customer.id}}</td>
+                  <td>{{customer.name}}</td>
+                  <td>${{customer.balance}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="transfer" ng-submit="send()">
+    <label>From:
+      <select ng-model="from">
+        <option ng-repeat="friend in friends" value="{{friend.id}}">{{friend.name}}</option>
+      </select>
+    </label>
+    <label>To:
+      <select ng-model="to">
+        <option ng-repeat="friend in friends" value="{{friend.id}}">{{friend.name}}</option>
+      </select>
+    </label>
+    <label>Amount
+      $<input class="amount" type="number" ng-model="amount">
+    </label>
+    <input type="submit" value="Send" ng-click="sendTransaction()">
+  </form>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
